@@ -2,14 +2,14 @@ public abstract class Pieces {
     private boolean white = false;
     private boolean killed = false;
 
-    public Piece(boolean white)
+    public Pieces(boolean white)
     {
-        this.setWhite(white);
+        this.white = white;
     }
 
     public boolean isWhite()
     {
-        return this.white;
+        return white;
     }
 
     public void setWhite(boolean white)
@@ -19,7 +19,7 @@ public abstract class Pieces {
 
     public boolean isKilled()
     {
-        return this.killed;
+        return killed;
     }
 
     public void setKilled(boolean killed)
@@ -27,7 +27,6 @@ public abstract class Pieces {
         this.killed = killed;
     }
 
-    public abstract boolean canMove(Board board,
-                                    Spot start, Spot end);
+    public abstract boolean canMove(Board board, Spot start, Spot end);
 }
-}
+
